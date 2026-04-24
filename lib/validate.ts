@@ -2,6 +2,7 @@ const RESERVED_HANDLES = new Set([
   'onboarding', 'api', 'admin', 'about', 'help', 'support', 'login',
   'logout', 'register', 'signup', 'signin', 'dashboard', 'settings',
   '_next', 'static', 'favicon', 'robots', 'sitemap', 'manifest', 'not-found',
+  'stats',
 ])
 
 export function sanitizeHandle(name: string): string {

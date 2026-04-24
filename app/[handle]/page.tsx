@@ -274,7 +274,11 @@ export default function DailyView() {
   const headerTextShadow = '0 1px 12px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.3)'
 
   return (
-    <main className="min-h-screen flex flex-col relative" style={{ background: skyGradient }}>
+    <main className="min-h-screen flex flex-col relative">
+      <div
+        className="fixed inset-0 pointer-events-none -z-10 transition-all duration-[3000ms]"
+        style={{ background: skyGradient }}
+      />
       {weatherOverlay && (
         <div
           className="fixed inset-0 pointer-events-none transition-all duration-[3000ms]"
@@ -370,15 +374,15 @@ export default function DailyView() {
         )}
       </div>
 
-      <div className="fixed bottom-2 left-0 right-0 flex justify-center items-center gap-3 z-10">
-        <p className="text-white/18 text-[10px] tracking-widest uppercase">
+      <div className="fixed bottom-2 left-0 right-0 flex justify-center items-center gap-2 z-10">
+        <p className="text-white/55 text-[10px] tracking-widest uppercase bg-black/25 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
           © {new Date().getFullYear()} Rabbit Hole Ventures
         </p>
         <a
           href="https://ko-fi.com/powntheday"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white/18 hover:text-white/40 text-[10px] tracking-widest uppercase transition-colors"
+          className="text-white/55 hover:text-white/80 text-[10px] tracking-widest uppercase transition-colors bg-black/25 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 hover:bg-black/35"
         >
           ☕ Buy me a coffee
         </a>
