@@ -370,7 +370,21 @@ export default function DailyView() {
         )}
       </div>
 
-      <div className="fixed bottom-6 left-0 right-0 flex justify-center z-10 gap-3">
+      <div className="fixed bottom-2 left-0 right-0 flex justify-center items-center gap-3 z-10">
+        <p className="text-white/18 text-[10px] tracking-widest uppercase">
+          © {new Date().getFullYear()} Rabbit Hole Ventures
+        </p>
+        <a
+          href="https://ko-fi.com/powntheday"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white/18 hover:text-white/40 text-[10px] tracking-widest uppercase transition-colors"
+        >
+          ☕ Buy me a coffee
+        </a>
+      </div>
+
+      <div className="fixed bottom-8 left-0 right-0 flex justify-center z-10 gap-3">
         <button
           onClick={() => router.push('/')}
           className="text-white/55 hover:text-white/80 text-sm transition-colors cursor-pointer bg-black/25 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 hover:bg-black/35"
